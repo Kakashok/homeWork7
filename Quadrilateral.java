@@ -3,10 +3,10 @@ package lesson7;
 public class Quadrilateral extends Figure {
    protected double a, b, c, d, alpha, beta;
 
-   protected String name = "Quadrilateral";
 // alpha - угол между a, b. beta - угол между c, d.
 
     public Quadrilateral() {
+        name = "Quadrilateral";
     }
 
 
@@ -17,6 +17,7 @@ public class Quadrilateral extends Figure {
         this.d = d;
         this.alpha = alpha;
         this.beta = beta;
+        name = "Quadrilateral";
     }
 
     public double getAlpha() {
@@ -72,7 +73,7 @@ public class Quadrilateral extends Figure {
 
     public double square() {
         double p = (a + b + c + d) / 2;
-        square = Math.sqrt((p - a) * (p - b) * (p - c) * (p - c) - a * b * c * d * Math.pow(Math.cos((alpha + beta) / 2), Math.cos((alpha + beta) / 2)));
+        square = Math.sqrt((p - a) * (p - b) * (p - c) * (p - c) - a * b * c * d * Math.pow(Math.cos((alpha + beta) / 2), 2));
         return square;
     }
 

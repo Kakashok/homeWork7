@@ -2,15 +2,16 @@ package lesson7;
 
 public class Triangle extends Figure {
     protected double a, b, c;
-    protected String name = "Triangle";
 
     public Triangle() {
+        name = "Triangle";
     }
 
     public Triangle(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
+        name = "Triangle";
     }
 
     public double getA() {

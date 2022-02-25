@@ -4,9 +4,10 @@ public class Figure {
 
 
     protected double square = 0, perimeter = 0;
-    protected String name = "Figure";
+    protected String name;
 
     public Figure() {
+        name = "Figure";
     }
 
     public double getS() {

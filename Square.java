@@ -2,14 +2,14 @@ package lesson7;
 
 public class Square extends Quadrilateral {
 
-    protected String name = "Square";
 
     public Square() {
-
+         name = "Square";
     }
 
     public Square(double a) {
         super(a, 0, 0, 0, 0, 0);
+        name = "Square";
     }
 
 

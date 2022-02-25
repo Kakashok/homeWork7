@@ -2,14 +2,14 @@ package lesson7;
 
 public class Circle extends Ellipse{
 
-    protected String name = "Circle";
-
 
     public Circle() {
+        name = "Circle";
     }
 
     public Circle(double a) {
         super(a, 0);
+        name = "Circle";
     }
 
     @Override

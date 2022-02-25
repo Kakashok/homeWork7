@@ -2,14 +2,15 @@ package lesson7;
 
 public class Ellipse extends Figure{
     protected double a, b;
-    protected String name = "Ellipse";
 
     public Ellipse() {
+        name = "Ellipse";
     }
 
     public Ellipse(double a, double b) {
         this.a = a;
         this.b = b;
+        name = "Ellipse";
     }
 
     public double getA() {

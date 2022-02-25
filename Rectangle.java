@@ -2,13 +2,14 @@ package lesson7;
 
 public class Rectangle extends Quadrilateral {
 
-    protected String name = "Rectangle";
 
     public Rectangle() {
+        name = "Rectangle";
     }
 
     public Rectangle(double a, double b) {
         super(a, b, 0, 0, 0, 0);
+        name = "Rectangle";
     }
 
     @Override
