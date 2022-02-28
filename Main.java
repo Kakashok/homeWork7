@@ -39,35 +39,35 @@ public class Main {
         quadrilateral.printS();
         System.out.println(quadrilateral);
 
-        Square square = new Square(5);
+        Square square = new Square(6);
         square.square();
         square.perimeter();
         square.printP();
         square.printS();
         System.out.println(square);
 
-        Rectangle rectangle = new Rectangle(3, 5);
+        Rectangle rectangle = new Rectangle(5,16);
         rectangle.square();
         rectangle.perimeter();
         rectangle.printP();
         rectangle.printS();
         System.out.println(rectangle);
 
-        Trapezoid trapezoid = new Trapezoid(2, 3, 4, 5, 6);
+        Trapezoid trapezoid = new Trapezoid(6,7,5,5,6);
         trapezoid.perimeter();
         trapezoid.square();
         trapezoid.printP();
         trapezoid.printS();
         System.out.println(trapezoid);
 
-        Ellipse ellipse = new Ellipse(2, 5);
+        Ellipse ellipse = new Ellipse(4,5);
         ellipse.perimeter();
         ellipse.square();
         ellipse.printP();
         ellipse.printS();
         System.out.println(ellipse);
 
-        Circle circle = new Circle(10);
+        Circle circle = new Circle(5);
         circle.perimeter();
         circle.square();
         circle.printP();

@@ -1,7 +1,7 @@
 package lesson7;
 
-public class Quadrilateral extends Figure {
-   protected double a, b, c, d, alpha, beta;
+public class Quadrilateral extends Square {
+   protected double b, c, d, alpha, beta;
 
 // alpha - угол между a, b. beta - угол между c, d.
 
@@ -11,7 +11,7 @@ public class Quadrilateral extends Figure {
 
 
     public Quadrilateral(double a, double b, double c, double d, double alpha, double beta) {
-        this.a = a;
+        super (a);
         this.b = b;
         this.c = c;
         this.d = d;
@@ -35,12 +35,6 @@ public class Quadrilateral extends Figure {
     public void setBeta(int beta) {
         this.beta = beta;
     }
-
-    public double getA() {
-        return a;
-    }
-
-    public void setA(int a) {this.a = a; }
 
     public double getB() {
         return b;
@@ -66,11 +60,13 @@ public class Quadrilateral extends Figure {
         this.d = d;
     }
 
+    @Override
     public double perimeter() {
         perimeter =  a + b + c + d;
         return perimeter;
     }
 
+    @Override
     public double square() {
         double p = (a + b + c + d) / 2;
         square = Math.sqrt((p - a) * (p - b) * (p - c) * (p - c) - a * b * c * d * Math.pow(Math.cos((alpha + beta) / 2), 2));
@@ -91,4 +87,35 @@ public class Quadrilateral extends Figure {
                                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Quadrilateral that = (Quadrilateral) o;
+
+        if (Double.compare(that.b, b) != 0) return false;
+        if (Double.compare(that.c, c) != 0) return false;
+        if (Double.compare(that.d, d) != 0) return false;
+        if (Double.compare(that.alpha, alpha) != 0) return false;
+        return Double.compare(that.beta, beta) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        long temp;
+        temp = Double.doubleToLongBits(b);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(c);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(d);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(alpha);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(beta);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }

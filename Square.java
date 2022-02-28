@@ -1,25 +1,31 @@
 package lesson7;
 
-public class Square extends Quadrilateral {
+public class Square extends Figure {
 
+    protected double a;
 
     public Square() {
          name = "Square";
     }
 
     public Square(double a) {
-        super(a, 0, 0, 0, 0, 0);
+        this.a = a;
         name = "Square";
     }
 
+    public double getA() {
+        return a;
+    }
 
-    @Override
+    public void setA(double a) {
+        this.a = a;
+    }
+
     public double perimeter() {
         perimeter = a * 4;
         return perimeter;
     }
 
-    @Override
     public double square() {
         square = a * a;
         return square;
@@ -32,5 +38,21 @@ public class Square extends Quadrilateral {
                 ", perimeter=" + perimeter +
                 ", a=" + a +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Square square = (Square) o;
+
+        return Double.compare(square.a, a) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        long temp = Double.doubleToLongBits(a);
+        return (int) (temp ^ (temp >>> 32));
     }
 }
