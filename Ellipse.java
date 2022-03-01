@@ -21,15 +21,15 @@ public class Ellipse extends Circle{
     }
 
     @Override
-    public double perimeter(){
-        perimeter = 4 * ((Math.PI * r * r2 + (r - r2))/(r + r2));
-        return perimeter;
+    public double getP(){
+        return 4 * ((Math.PI * r * r2 + (r - r2))/(r + r2));
+
     }
 
     @Override
-    public double square(){
-        square = Math.PI * r * r2;
-        return square;
+    public double getS(){
+        return Math.PI * r * r2;
+
     }
 
     @Override
@@ -37,8 +37,8 @@ public class Ellipse extends Circle{
         return "Ellipse{" +
                 "r=" + r +
                 ", r2=" + r2 +
-                ", square=" + square +
-                ", perimeter=" + perimeter +
+                ", square=" + getS() +
+                ", perimeter=" + getP() +
                 '}';
     }
 

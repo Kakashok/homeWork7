@@ -21,21 +21,21 @@ public class Square extends Figure {
         this.a = a;
     }
 
-    public double perimeter() {
-        perimeter = a * 4;
-        return perimeter;
+    @Override
+    public double getP() {
+        return a * 4;
     }
 
-    public double square() {
-        square = a * a;
-        return square;
+    @Override
+    public double getS() {
+        return a * a;
     }
 
     @Override
     public String toString() {
         return "Square{" +
-                "square=" + square +
-                ", perimeter=" + perimeter +
+                "square=" + getS() +
+                ", perimeter=" + getP() +
                 ", a=" + a +
                 '}';
     }

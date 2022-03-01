@@ -38,22 +38,22 @@ public class Triangle extends Figure {
         this.c = c;
     }
 
-    public double perimeter() {
-        perimeter = a + b + c;
-        return perimeter;
+    public double getP() {
+        return a + b + c;
+
     }
 
-    public double square() {
+    public double getS() {
         double p = (a + b + c) / 2;
-        square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        return square;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+
     }
 
     @Override
     public String toString() {
         return "Triangle{" +
-                "square=" + square +
-                ", perimeter=" + perimeter +
+                "square=" + getS() +
+                ", perimeter=" + getP() +
                 ", a=" + a +
                 ", b=" + b +
                 ", c=" + c +

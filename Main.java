@@ -33,50 +33,37 @@ public class Main {
 
 
         Quadrilateral quadrilateral = new Quadrilateral(10, 15, 16, 12, 60, 120);
-        quadrilateral.square();
-        quadrilateral.perimeter();
+
         quadrilateral.printP();
         quadrilateral.printS();
         System.out.println(quadrilateral);
 
         Square square = new Square(6);
-        square.square();
-        square.perimeter();
         square.printP();
         square.printS();
         System.out.println(square);
 
-        Rectangle rectangle = new Rectangle(5,16);
-        rectangle.square();
-        rectangle.perimeter();
+        Rectangle rectangle = new Rectangle(5, 16);
         rectangle.printP();
         rectangle.printS();
         System.out.println(rectangle);
 
-        Trapezoid trapezoid = new Trapezoid(6,7,5,5,6);
-        trapezoid.perimeter();
-        trapezoid.square();
+        Trapezoid trapezoid = new Trapezoid(6, 7, 5, 5, 6);
         trapezoid.printP();
         trapezoid.printS();
         System.out.println(trapezoid);
 
-        Ellipse ellipse = new Ellipse(4,5);
-        ellipse.perimeter();
-        ellipse.square();
+        Ellipse ellipse = new Ellipse(4, 5);
         ellipse.printP();
         ellipse.printS();
         System.out.println(ellipse);
 
         Circle circle = new Circle(5);
-        circle.perimeter();
-        circle.square();
         circle.printP();
         circle.printS();
         System.out.println(circle);
 
-        Triangle triangle = new Triangle(10, 8 , 5);
-        triangle.perimeter();
-        triangle.square();
+        Triangle triangle = new Triangle(10, 8, 5);
         triangle.printP();
         triangle.printS();
         System.out.println(triangle);

@@ -1,7 +1,7 @@
 package lesson7;
 
 public class Quadrilateral extends Square {
-   protected double b, c, d, alpha, beta;
+    protected double b, c, d, alpha, beta;
 
 // alpha - угол между a, b. beta - угол между c, d.
 
@@ -11,7 +11,7 @@ public class Quadrilateral extends Square {
 
 
     public Quadrilateral(double a, double b, double c, double d, double alpha, double beta) {
-        super (a);
+        super(a);
         this.b = b;
         this.c = c;
         this.d = d;
@@ -61,30 +61,28 @@ public class Quadrilateral extends Square {
     }
 
     @Override
-    public double perimeter() {
-        perimeter =  a + b + c + d;
-        return perimeter;
+    public double getP() {
+        return a + b + c + d;
     }
 
     @Override
-    public double square() {
+    public double getS() {
         double p = (a + b + c + d) / 2;
-        square = Math.sqrt((p - a) * (p - b) * (p - c) * (p - c) - a * b * c * d * Math.pow(Math.cos((alpha + beta) / 2), 2));
-        return square;
-    }
+        return Math.sqrt((p - a) * (p - b) * (p - c) * (p - c) - a * b * c * d * Math.pow(Math.cos((alpha + beta) / 2), 2));
+            }
 
     @Override
     public String toString() {
         return "Quadrilateral{" +
-                "square=" + square +
-                ", perimeter=" + perimeter +
+                "square=" + getS() +
+                ", perimeter=" + getP() +
                 ", a=" + a +
                 ", b=" + b +
                 ", c=" + c +
                 ", d=" + d +
                 ", alpha=" + alpha +
                 ", beta=" + beta +
-                                '}';
+                '}';
     }
 
     @Override

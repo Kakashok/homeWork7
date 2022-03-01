@@ -50,22 +50,20 @@ public class Trapezoid extends Square {
     }
 
     @Override
-    public double perimeter() {
-        perimeter =  a + b + c + d;
-        return perimeter;
+    public double getP() {
+        return a + b + c + d;
     }
 
     @Override
-    public double square() {
-        square = (a + b) / 2 * h;
-        return square;
+    public double getS() {
+        return (a + b) / 2 * h;
     }
 
     @Override
     public String toString() {
         return "Trapezoid{" +
-                "square=" + square +
-                ", perimeter=" + perimeter +
+                "square=" + getS() +
+                ", perimeter=" + getP() +
                 ", a=" + a +
                 ", b=" + b +
                 ", c=" + c +

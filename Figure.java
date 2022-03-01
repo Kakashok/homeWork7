@@ -2,34 +2,33 @@ package lesson7;
 
 public class Figure {
 
-    protected double square = 0, perimeter = 0;
-    protected String name;
+       protected String name;
 
     public Figure() {
         name = "Figure";
     }
 
     public double getS() {
-        return square;
+        return 0;
     }
 
     public double getP() {
-        return perimeter;
+        return 0;
     }
 
-    void printP(){
-        System.out.println(name + " perimeter is: " + perimeter);
+    void printP() {
+        System.out.println(name + " perimeter is: " + getP());
     }
 
     void  printS() {
-        System.out.println(name + " square is: " + square);
+        System.out.println(name + " square is: " + getS());
     }
 
     @Override
     public String toString() {
         return "Figure{" +
-                "s=" + square +
-                ", p=" + perimeter +
+                "s=" + getS() +
+                ", p=" + getP() +
                 '}';
     }
 
@@ -40,20 +39,11 @@ public class Figure {
 
         Figure figure = (Figure) o;
 
-        if (Double.compare(figure.square, square) != 0) return false;
-        if (Double.compare(figure.perimeter, perimeter) != 0) return false;
         return name != null ? name.equals(figure.name) : figure.name == null;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        temp = Double.doubleToLongBits(square);
-        result = (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(perimeter);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
+        return name != null ? name.hashCode() : 0;
     }
 }

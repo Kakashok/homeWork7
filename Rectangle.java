@@ -22,22 +22,20 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public double perimeter() {
-        perimeter = (a + b) * 2;
-        return perimeter;
+    public double getP() {
+        return (a + b) * 2;
     }
 
     @Override
-    public double square() {
-        square = a * b;
-        return square;
+    public double getS() {
+        return a * b;
     }
 
     @Override
     public String toString() {
         return "Rectangle{" +
-                "square=" + square +
-                ", perimeter=" + perimeter +
+                "square=" + getS() +
+                ", perimeter=" + getP() +
                 ", a=" + a +
                 ", b=" + b +
                 '}';

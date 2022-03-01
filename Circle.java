@@ -21,22 +21,20 @@ public class Circle extends Figure {
         this.r = r;
     }
 
-    public double perimeter() {
-        perimeter = Math.PI * 2 * r;
-        return perimeter;
-    }
+    public double getP() {
+        return Math.PI * 2 * r;
+           }
 
-    public double square() {
-        square = Math.PI * r * r;
-        return square;
-    }
+    public double getS() {
+        return Math.PI * r * r;
+            }
 
     @Override
     public String toString() {
         return "Circle{" +
                 "r=" + r +
-                ", square=" + square +
-                ", perimeter=" + perimeter +
+                ", square=" + getS() +
+                ", perimeter=" + getP() +
                 '}';
     }
 
