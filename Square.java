@@ -1,12 +1,14 @@
 package lesson7;
 
+
 public class Square extends Figure {
 
     protected double a;
 
     public Square() {
-         name = "Square";
+        name = "Square";
     }
+
 
     public Square(double a) {
         this.a = a;
@@ -40,19 +42,21 @@ public class Square extends Figure {
                 '}';
     }
 
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         Square square = (Square) o;
 
         return Double.compare(square.a, a) == 0;
     }
 
-    @Override
     public int hashCode() {
-        long temp = Double.doubleToLongBits(a);
-        return (int) (temp ^ (temp >>> 32));
+        int result = super.hashCode();
+        long temp;
+        temp = Double.doubleToLongBits(a);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 }
